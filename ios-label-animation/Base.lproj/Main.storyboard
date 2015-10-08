@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,14 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvo-1T-hZG">
-                                <rect key="frame" x="277" y="550" width="47" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Toggle"/>
-                                <connections>
-                                    <action selector="toggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GDP-pB-DQA"/>
-                                </connections>
-                            </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2c-Tw-TsB">
                                 <rect key="frame" x="180" y="289" width="240" height="21"/>
                                 <subviews>
@@ -50,17 +43,57 @@
                                     <constraint firstAttribute="height" constant="21" id="jMN-CC-zGE"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2U9-mx-6b0" userLabel="Slide View" customClass="SlideLabelView" customModule="ios_label_animation" customModuleProvider="target">
+                                <rect key="frame" x="41" y="52" width="534" height="29"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.9778735632183907" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="mii-KZ-gKa"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDp-t8-R0u">
+                                <rect key="frame" x="453" y="550" width="122" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Toggle - Different"/>
+                                <connections>
+                                    <action selector="toggleDifferent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fKN-6Z-8ZS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvo-1T-hZG">
+                                <rect key="frame" x="20" y="550" width="100" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Toggle - Same"/>
+                                <connections>
+                                    <action selector="toggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GDP-pB-DQA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pDp-t8-R0u" secondAttribute="trailing" constant="5" id="0WL-gW-3pd"/>
+                            <constraint firstItem="2U9-mx-6b0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="2Td-1T-Hb7"/>
+                            <constraint firstItem="2U9-mx-6b0" firstAttribute="leading" secondItem="x2c-Tw-TsB" secondAttribute="leading" id="JDb-KU-uVz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qvo-1T-hZG" secondAttribute="bottom" constant="20" id="QJA-hz-QrG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2U9-mx-6b0" secondAttribute="trailing" constant="5" id="YTg-Tt-uoL"/>
                             <constraint firstItem="x2c-Tw-TsB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ztg-hG-zYg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pDp-t8-R0u" secondAttribute="bottom" constant="20" id="Zvj-eh-6uv"/>
+                            <constraint firstAttribute="trailing" secondItem="2U9-mx-6b0" secondAttribute="trailing" constant="168" id="fTS-Sg-B6v"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="qvo-1T-hZG" secondAttribute="leading" id="gcU-68-mVJ"/>
+                            <constraint firstItem="2U9-mx-6b0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="iTu-GD-WDQ"/>
                             <constraint firstItem="x2c-Tw-TsB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pKc-0d-vxM"/>
                             <constraint firstItem="qvo-1T-hZG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tuZ-aU-Xcu"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JDb-KU-uVz"/>
+                                <exclude reference="fTS-Sg-B6v"/>
+                                <exclude reference="tuZ-aU-Xcu"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="customView" destination="2U9-mx-6b0" id="huf-9i-8im"/>
                         <outlet property="firstLabel" destination="bHk-gp-JQQ" id="Vz6-71-rZH"/>
                         <outlet property="secondLabel" destination="qUY-NW-brI" id="UYp-FJ-zqO"/>
                     </connections>

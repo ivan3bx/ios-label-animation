@@ -13,6 +13,7 @@
 		2C4F7C231BC5A64700C257B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F7C221BC5A64700C257B0 /* Assets.xcassets */; };
 		2C4F7C261BC5A64700C257B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F7C241BC5A64700C257B0 /* LaunchScreen.storyboard */; };
 		2C4F7C311BC5A64700C257B0 /* ios_label_animationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F7C301BC5A64700C257B0 /* ios_label_animationUITests.swift */; };
+		2C4F7C3C1BC6AD2E00C257B0 /* SlideLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F7C3B1BC6AD2E00C257B0 /* SlideLabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		2C4F7C2C1BC5A64700C257B0 /* ios-label-animationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-label-animationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4F7C301BC5A64700C257B0 /* ios_label_animationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_label_animationUITests.swift; sourceTree = "<group>"; };
 		2C4F7C321BC5A64700C257B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C4F7C3B1BC6AD2E00C257B0 /* SlideLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideLabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				2C4F7C1B1BC5A64700C257B0 /* AppDelegate.swift */,
 				2C4F7C1D1BC5A64700C257B0 /* ViewController.swift */,
 				2C4F7C1F1BC5A64700C257B0 /* Main.storyboard */,
+				2C4F7C3B1BC6AD2E00C257B0 /* SlideLabelView.swift */,
 				2C4F7C221BC5A64700C257B0 /* Assets.xcassets */,
 				2C4F7C241BC5A64700C257B0 /* LaunchScreen.storyboard */,
 				2C4F7C271BC5A64700C257B0 /* Info.plist */,
@@ -199,6 +202,7 @@
 			files = (
 				2C4F7C1E1BC5A64700C257B0 /* ViewController.swift in Sources */,
 				2C4F7C1C1BC5A64700C257B0 /* AppDelegate.swift in Sources */,
+				2C4F7C3C1BC6AD2E00C257B0 /* SlideLabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     
+    @IBOutlet weak var customView: SlideLabelView!
     
     override func viewDidLoad() {
         firstLabel.hidden  = false
@@ -37,10 +38,16 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func toggleDifferent(sender: AnyObject) {
+        customView.text = "Different: \(rand())"
+        
+    }
     /**
      Toggling with simple keyframe animation on two alternating labels
      */
     @IBAction func toggle(sender: AnyObject) {
+        customView.text = "Flip!"
+        
         let toHide = labelToHide()
         let toShow = labelToShow()
         
